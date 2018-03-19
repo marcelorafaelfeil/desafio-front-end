@@ -1,0 +1,40 @@
+<h5 class="ui top attached header">
+	Consultas
+</h5>
+<div class="ui attached segment" [ngClass]="{'loading': loadingQueries}">
+	<div class="ui grid">
+		<div class="sixteen wide column">
+			<div class="ui form">
+				<div class="field">
+					Filtrar por:
+				</div>
+				<div class="inline fields">
+					<div class="field">
+						<checkbox radio>Pessoas ainda presentes</checkbox>
+					</div>
+					<div class="field">
+						<checkbox radio>Pessoas que já deixaram o hotel</checkbox>
+					</div>
+				</div>
+				<mr-data-tables dtClass="very baic">
+					<thead>
+						<tr>
+							<th class="dt_name" name="name" width="55%">Nome</th>
+							<th class="dt_document" name="document" sortingType="date-uk" width="13%">Documento</th>
+							<th class="dt_amount" name="humanAmount" sortingType="date-uk" width="13%">Documento</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let item of listOfGuests; let i = index;" [attr.key]="i">
+							<td>
+								{{item.name}}
+							</td>
+							<td>{{item.document}}</td>
+							<td>{{item.amount|currency:'BRL'}}</td>
+						</tr>
+					</tbody>
+				</mr-data-tables>
+			</div>
+		</div>
+	</div>
+</div>

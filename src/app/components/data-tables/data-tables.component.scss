@@ -1,0 +1,121 @@
+// É importante que o estilo do dataTable
+// seja colocado dentro do seletor ::ng-deep por que o plugin do dataTable
+// recria todas as tags sem os parâmetros do angular.
+::ng-deep {
+	a {
+		cursor: pointer;
+	}
+	tfoot {
+		tr {
+			.dropdown {
+				width: 100%;
+				.text {
+					color: #AAAAAA !important
+				}
+				> .icon {
+					float: right;
+				}
+				.input {
+					i.search.icon {
+						height: 19px;
+					}
+					input {
+						margin-right: 20px;
+					}
+				}
+				.ui.circular.label {
+					width: 0px;
+					height: 0px;
+				}
+			}
+		}
+	}
+	tbody {
+		.ui.circular.label {
+			width: 0px !important;
+			height: 0px !important;
+		}
+	}
+    .content-table {
+        position: relative;
+    }
+    .dataTable {
+        .filter.icon {
+            color: #AAAAAA !important;
+            opacity: 0.5 !important;
+            &:focus {
+                color: rgba(0, 0, 0, 0.87) !important;
+                opacity: 1 !important;
+            }
+            &:before {
+                left: auto !important;
+                right: 0 !important;
+            }
+            &:after {
+                left: auto !important;
+                right: 0 !important;
+            }
+        }
+        .loading-row {
+            text-align: center !important;
+        }
+        tr {
+            th {
+                cursor: pointer !important;
+            }
+        }
+        tfoot {
+            display: table-header-group;
+            th {
+                border-top: 0px !important;
+                border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+                .input {
+                    width: 100% !important;
+                }
+                input {
+                    color: #AAAAAA !important;
+                    &:focus {
+                        color: rgba(0, 0, 0, 0.87) !important;
+                    }
+                }
+            }
+        }
+    }
+    .dataTables_wrapper {
+        .dataTables_info {
+            color: #666;
+            padding-top: 10px !important;
+            padding-bottom: 10px;
+            padding-right: 3px;
+        }
+        .list-options {
+            width: 100%;
+            padding-top: 15px;
+            .dataTables_length {
+                display: inline-block;
+                color: #666;
+            }
+            .dataTables_paginate {
+                float: right;
+            }
+        }
+    }
+}
+.dt {
+    &.errors {
+        color:#912d2b;
+        background-color: #fff6f6;
+        box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent;
+        padding: 20px;
+        margin-bottom: 20px;
+        h3 {
+            font-size: 16px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        ul {
+            padding: 0px 0px 0px 25px;
+            margin: 0px;
+        }
+    }
+}

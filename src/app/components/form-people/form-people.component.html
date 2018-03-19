@@ -1,0 +1,18 @@
+<form class="ui form" [formGroup]="peopleForm" (submit)="sendData()">
+	<div class="field" [ngClass]="{error: (isSubmitted) && peopleForm.get('name').invalid}">
+		<label>Nome</label>
+		<input formControlName="name" type="text" />
+	</div>
+	<div class="field" [ngClass]="{error: (isSubmitted) && peopleForm.get('name').invalid}">
+		<label>Documento</label>
+		<input formControlName="document" type="text" />
+	</div>
+	<div class="field" [ngClass]="{error: (isSubmitted) && peopleForm.get('name').invalid}">
+		<label>Telefone</label>
+		<input formControlName="phone" type="text" />
+	</div>
+	<div class="field text-right">
+		<button class="ui button" type="button" (click)="cancel()">Cancelar</button>
+		<button class="ui button primary" [ngClass]="{'loading': loadingForm}" type="submit">Confirmar</button>
+	</div>
+</form>

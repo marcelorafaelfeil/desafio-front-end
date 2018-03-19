@@ -1,0 +1,13 @@
+mr-data-tables /deep/ {
+    table {
+        border-radius: 0px !important;
+        border: 0px !important;
+        thead {
+            tr {
+                th {
+                    background: transparent !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+	<div *ngIf="errors.has()" class="dt errors">
+		<h3>Erro ao renderizar tabela</h3>
+		<ul>
+			<li *ngFor="let error of errors.getErrors()">
+				{{error.details}}
+			</li>
+		</ul>
+	</div>
+	<table class="ui {{dtClass}} table">
+		<ng-content></ng-content>
+	</table>

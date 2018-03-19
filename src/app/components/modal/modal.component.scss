@@ -1,0 +1,48 @@
+.ui.modal.basic {
+    /deep/ {
+        .content {
+            background-color: transparent;
+        }
+        .header {
+            color: #FFFFFF;
+            margin: 0px;
+            background-color: transparent;
+        }
+        .actions {
+            background-color: transparent;
+        }
+    }
+}
+
+::ng-deep {
+    .ui.dimmer.modals.inverted {
+        modal-icon-header {
+            .header {
+                color: rgba(0, 0, 0, 0.87) !important;
+            }
+        }
+    }
+
+    .modal {
+        .content-accordion {
+            margin: 0px -21px;
+            .accordion {
+                margin-top: 7px;
+                padding-left: 0px;
+                padding-right: 0px;
+                .title {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    padding-top: 20px;
+                    padding-bottom: 0px;
+					padding-left: 15px;
+					padding-right: 15px;
+                    border-top: 1px solid rgba(34, 36, 38, 0.15);
+                }
+                .content {
+                    padding: 1.5rem 1.5rem 1.5rem;
+                }
+            }
+        }
+    }
+}
